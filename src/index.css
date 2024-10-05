@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .navTab{
+        @apply flex;
+        @apply items-center;
+        @apply gap-1 ;
+        @apply py-4 ;
+        @apply transition-colors ;
+        @apply text-lg ;
+        @apply duration-300 ;
+        @apply hover:text-sky-700 ;
+        @apply focus:text-sky-700 ;
+        @apply focus:outline-none ;
+        @apply focus-visible:outline-none;
+        @apply  lg:px-8;
+    } 
+}
