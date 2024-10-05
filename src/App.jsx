@@ -5,7 +5,7 @@ import Home from './components/Home'
 function App() {
 
   return (
-    <BrowserRouter basename='/o-consultation/'>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

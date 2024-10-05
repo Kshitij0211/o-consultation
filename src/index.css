@@ -15,6 +15,6 @@
         @apply focus:text-sky-700 ;
         @apply focus:outline-none ;
         @apply focus-visible:outline-none;
-        @apply  lg:px-8;
+        @apply lg:px-8;
     } 
 }
