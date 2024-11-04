@@ -2,28 +2,25 @@ const DoctorInfo = ( props ) => {
 
     return (
         <>
-            {/*<!-- Component: Basic blog card --> */}
-            < div  className="border-b-4 border-white hover:border-sky-600 transition duration-150 overflow-clip rounded-md *:rounded-xl bg-white text-slate-500 shadow-md shadow-slate-200 p-2">
-                {/*  <!-- Image --> */}
-                <figure >
+            <div className="border-b-4 border-white hover:border-sky-600 transition duration-150 overflow-clip rounded-md bg-white text-slate-500 shadow-md shadow-slate-200 p-2">
+                <figure>
                     <img
                         src={props.profile}
-                        alt="card image rounded-md "
-                        className="aspect-square object-cover items-baseline"
+                        alt="card image"
+                        className="aspect-square object-cover items-baseline doctorProfileImage"
                     />
                 </figure>
-                {/*  <!-- Body--> */}
                 <div className="w-full">
                     <header className="mb-4 flex flex-row items-center justify-between">
                         <div className="left">
-                            <h3 className="text-xl mt-2 font-semibold text-slate-700">
+                            <h3 className="text-base xl:text-xl mt-2 font-semibold text-slate-700">
                                 {props.name}
                             </h3>
                             <p className="text-sm text-slate-600 capitalize">{props.spec}</p>
                         </div>
-                        <div className="right flex flex-row">
-                            {[...Array(props.rating)].map((_, key) =>
-                                <span key={key} aria-hidden="true">
+                        <div className="right flex flex-row items-center">
+                            {props.rating}
+                                <span aria-hidden="true">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 24 24"
@@ -37,31 +34,12 @@ const DoctorInfo = ( props ) => {
                                         />
                                     </svg>
                                 </span>
-                            )}
-                            {[...Array(5 - props.rating)].map((_, key) =>
-                                <span key={key} aria-hidden="true">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        strokeWidth="1.5"
-                                        stroke="currentColor"
-                                        className="h-4 w-4 text-amber-500"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
-                                        />
-                                    </svg>
-                                </span>
-                            )}
                         </div>
                     </header>
                     <p className="text-sm text-slate-600">
                         {props.content}
                     </p>
-                    <div className="flex flex-row justify-between mt-4 gap-x-2">
+                    <div className="flex flex-col xl:flex-row justify-between mt-4 gap-2">
                         <button className="inline-flex flex-grow items-center justify-center h-8 gap-2 px-4 text-xs font-medium tracking-wide text-white transition duration-300 rounded focus-visible:outline-none whitespace-nowrap bg-sky-500 hover:bg-sky-600 focus:bg-sky-700 disabled:cursor-not-allowed disabled:border-sky-300 disabled:bg-sky-300 disabled:shadow-none">
                             <span>Schedule Appointment</span>
                         </button>
@@ -71,7 +49,6 @@ const DoctorInfo = ( props ) => {
                     </div>
                 </div>
             </div >
-            {/*<!-- End Basic blog card --> */}
         </>
     )
 }

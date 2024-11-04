@@ -8,15 +8,19 @@ const Section3 = () => {
     const stepsToSchedule = [{
         _id: 'sts1',
         heading: "Create Account",
+        desc: `Creating an account by filling out the registration form to access personalized consultations, medical advice, and tailored resources.`
     }, {
         _id: 'sts2',
-        heading: "Search Doctor"
+        heading: "Search Doctor",
+        desc: `Use our intuitive search to explore and connect with experienced healthcare professionals in just a few clicks.`
     }, {
         _id: 'sts3',
         heading: "Schedule Appointment",
+        desc: `Select your preferred date and time to book your consultation in just a few clicks, accessing the care you need through our user-friendly platform.`
     }, {
         _id: 'sts4',
-        heading: "Start Consultation"
+        heading: "Start Consultation",
+        desc: `Log in at the designated time to start your consultation. Our secure platform will connect you with your doctor for a personalized virtual visit.`
     }]
 
     return (
@@ -27,31 +31,26 @@ const Section3 = () => {
                         How it Works
                     </h1>
                     <p className="md:text-lg text-md leading-8 my-8 text-gray-600 w-full md:w-[75%] mx-auto">
-                        Web accessibility means
-                        that websites, tools, and technologies are designed and developed so
-                        that people with disabilities can use them.
+                        Scheduling your appointment is quick and easy! Follow these simple steps to connect with our expert healthcare professionals and ensure you receive the care you need.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 justify-evenly text-center lg:w-[75%] lg:mx-auto gap-x-4">
                     {
                         stepsToSchedule.map((item, key) =>
                             // id={item._id} 
-                            <div key={key} className={`
-                                lg:-translate-x-full opacity-0 first:translate-x-0 lg:first:opacity-100 first:z-10 intersect intersect:translate-x-0 intersect:opacity-100 intersect-half 
-                            text-center translate-y-5 group transition duration-500 hover:translate-y-0 bg-white border-white hover:border-sky-800 border-b-4 hover:bg-sky-400 hover:text-white rounded shadow-2xl text-slate-500 shadow-black/30`}>
+                            <div key={key} className='stepsToSchedule intersect group'>
                                 <h1 className="absolute text-9xl -z-1 font-bold right-0 bottom-0 text-gray-600/[0.08] group-hover:text-gray-600/10 top-0 left-1 text-left">{(stepsToSchedule.findIndex(e => e.heading === item.heading) + 1).toString().padStart(2, 0)}</h1>
-                                <div className="p-6 relative z-1">
-                                    <h3 className="mb-4 text-2xl h-20 font-bold text-sky-600 group-hover:text-white text-left flex items-center">{item.heading}</h3>
-                                    <p className="text-justify">
-                                        All components come with proper attributes to ensure full
-                                        accessibility with the WAI-ARIA standards.
+                                <div className="p-6 relative z-1 flex flex-col h-full">
+                                    <h3 className="mb-4 text-xl xl:text-2xl h-20 font-bold text-sky-600 group-hover:text-white text-left flex items-start lg:items-center">{item.heading}</h3>
+                                    <p className="text-justify flex flex-1 items-start text-sm xl:text-base">
+                                        {item.desc}
                                     </p>
                                 </div>
                             </div>
                         )
                     }
                 </div>
-                <div className="flex flex-row gap-x-4 lg:flex-row-reverse mx-auto mt-8 lg:w-[75%] justify-start -translate-x-12 opacity-5 intersect intersect-half transition duration-500 intersect:translate-x-0 intersect:opacity-100">
+                <div className="flex flex-row gap-x-4 lg:flex-row-reverse mx-auto mt-8 lg:w-[75%] justify-start -translate-x-12 opacity-5 intersect transition duration-500 intersect:translate-x-0 intersect:opacity-100">
                     <button className="inline-flex h-12 mt-8 items-center justify-evenly gap-x-4 whitespace-nowrap rounded border font-bold border-sky-700 px-6 text-md tracking-tight text-sky-600 shadow-lg transition shadow-sky-200 duration-300 hover:border-sky-600 hover:text-white bg-white hover:bg-sky-500 hover:shadow-md hover:shadow-sky-200 focus:border-sky-700 focus:text-sky-700 focus:shadow-md focus:shadow-sky-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-sky-300 disabled:text-sky-300 disabled:shadow-none">
                         <span>Start Now</span>
                         <span className="text-xl flex flex-row gap-x-0 text-center">

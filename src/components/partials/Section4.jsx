@@ -76,7 +76,7 @@ const Section4 = () => {
 
     return (
         <>
-            <section className="bg-slate-200 justify-center flex flex-col px-3 md:px-12 py-5 overflow-clip relative" id="teamSection">
+            <section className="min-h-svh bg-slate-200 justify-center items-center flex flex-col px-3 md:px-12 py-5 overflow-clip relative" id="teamSection">
                 <div className="hero text-center">
                     <h1 className="lg:text-6xl lg:font-medium mdfont-semibold font-bold tracking-tight text-sky-600 text-3xl md:text-5xl text-center">
                         Our Team of Best Doctors

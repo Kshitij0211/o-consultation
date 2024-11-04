@@ -2,19 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    .navTab{
-        @apply flex;
-        @apply items-center;
-        @apply gap-1 ;
-        @apply py-4 ;
-        @apply transition-colors ;
-        @apply text-lg ;
-        @apply duration-300 ;
-        @apply hover:text-sky-700 ;
-        @apply focus:text-sky-700 ;
-        @apply focus:outline-none ;
-        @apply focus-visible:outline-none;
-        @apply lg:px-8;
-    } 
+.navTab {
+  @apply flex items-center gap-1 py-4 transition-colors text-lg duration-300 hover:text-sky-700 text-sky-700 focus:text-sky-700 focus:outline-none focus-visible:outline-none lg:px-8;
+}
+
+.service {
+    @apply flex flex-col items-center gap-4 text-center -translate-y-10 transition duration-500 intersect:translate-y-0;
+}
+
+.stepsToSchedule {
+    @apply lg:-translate-x-full opacity-0 first:translate-x-0 lg:first:opacity-100 first:z-10 intersect:translate-x-0 intersect:opacity-100 text-center translate-y-5 transition duration-500 hover:translate-y-0 bg-white border-white 
+    hover:border-sky-800 border-b-4 hover:bg-sky-400 hover:text-white rounded shadow-2xl text-slate-500 shadow-black/30
+}
+
+.locationFigCaption {
+    border-bottom-right-radius: calc(1.5rem - 0.75rem);
+}
+
+.doctorProfileImage {
+    border-radius: calc(0.5rem - 0.375rem);
+}
+
+.iconPanel > .panelBG {
+    background: radial-gradient(circle, rgba(3,105,167,1) 0%, rgba(8,47,73,1) 100%);
 }

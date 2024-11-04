@@ -25,8 +25,8 @@ const HeroSection = () => {
                                 Doctors<br />Online
                             </span>
                             <br />
-                            <div className="text-md my-6 md:w-[90%] text-justify">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            <div className="text-md my-6 md:w-[90%] text-justify normal-case">
+                            With a commitment to your health and well-being, we leverage the latest technology to connect you with specialists across various fields. Experience convenience, expertise, and compassionate care — because your health matters to us. Schedule Appointment and take the first step towards a healthier tomorrow!
                             </div>
                             <div className="flex flex-col gap-y-5 lg:flex-row justify-start lg:gap-x-10">
                                 <button className="inline-flex h-12 text-md items-center justify-center gap-2 whitespace-nowrap rounded bg-sky-600 px-6 font-medium tracking-wide text-white shadow-lg shadow-sky-200 transition duration-300 hover:bg-sky-700 hover:shadow-md hover:shadow-sky-200 focus:bg-sky-700 focus:shadow-md focus:shadow-sky-200 focus-visible:outline-none">
@@ -41,8 +41,8 @@ const HeroSection = () => {
                         </div>
                     </div>
                     <div className="hidden md:col-span-4 lg:col-span-6 bg-gradient-to-l from-sky-300 to-white relative overflow-clip md:flex flex-col justify-end">
-                        <div className="translate-y-10 opacity-0 intersect-half intersect:translate-y-0 intersect:opacity-100 transition duration-700">
-                            <img src={doctor1} className="relative h-[90svh] flex-grow"/>
+                        <div className="translate-y-10 opacity-0 intersect intersect:translate-y-0 intersect:opacity-100 transition duration-700">
+                            <img src={doctor1} className="relative h-[90svh] flex-grow hidden lg:flex"/>
                         </div>
                     </div>
                 </div>

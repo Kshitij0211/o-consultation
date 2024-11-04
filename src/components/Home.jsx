@@ -5,7 +5,7 @@ import Section3 from "./partials/Section3";
 import Section4 from "./partials/Section4";
 import StatsSection from "./partials/StatsSection";
 import Footer from "./partials/Footer";
-import Section5v2 from "./partials/Section5v2";
+import Section5 from "./partials/Section5";
 
 const Home = () => {
 
@@ -17,7 +17,7 @@ const Home = () => {
             <StatsSection />
             <Section3 />
             <Section4 />
-            <Section5v2 />
+            <Section5 />
             <Footer />
         </>
     )

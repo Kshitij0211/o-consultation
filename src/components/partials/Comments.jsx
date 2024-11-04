@@ -32,15 +32,25 @@ const Comments = (props) => {
 
     return (
         <li className="bg-sky-800 rounded text-white">
-            <div className="relative py-4">
-                <figure className="relative flex flex-col justify-between z-10">
-                    <blockquote className="p-3 md:p-6 text-xs md:text-sm lg:text-lg leading-relaxed text-pretty md:text-left">
+            <div className="relative py-4 h-full">
+                <figure className="relative flex flex-col justify-between z-10 h-full">
+                    <blockquote className="p-3 flex-1 md:p-6 text-xs md:text-sm lg:text-lg leading-relaxed text-pretty md:text-left">
                         <p>
-                            Wind-ui, is probably one of the best libraries I've came across.
-                            Good looking, easy to use and above all super accessible.
+                            {userDetails.comment}
                         </p>
                     </blockquote>
-                    <figcaption className="flex flex-col items-start justify-between gap-x-1 md:gap-x-2 px-2 md:px-6 pt-0 text-sm text-sky-500">
+                    <figcaption className="flex flex-row items-center justify-between gap-x-1 md:gap-x-2 px-2 md:px-6 pt-0 text-sm text-sky-500">
+                        <div className="flex items-center gap-4 text-sm text-sky-50">
+                            <img
+                                src={userDetails.profile}
+                                alt="user name"
+                                title="user name"
+                                className="rounded-full md:h-16 md:w-16 h-6 w-6 shrink-0 object-cover shadow-md shadow-gray-500"
+                            />
+                            <div className="flex flex-col gap-x-1 text-start">
+                                <span className="text-xs md:text-sm md:font-bold font-semibold capitalize">{userDetails.userName}</span>
+                            </div>
+                        </div>
                         <div className="inline-flex divide-x divide-sky-100 overflow-hidden rounded-full">
                             <button onClick={() => likedComment()} aria-checked={liked} 
                             className="inline-flex h-6 md:h-8 w-max items-center justify-center gap-x-1 md:gap-x-4 justify-self-center whitespace-nowrap rounded-s-full bg-sky-50 text-sky-500 px-2 md:px-4 text-xs font-medium tracking-tight md:tracking-wide transition duration-300 
@@ -55,18 +65,6 @@ const Comments = (props) => {
                                     <BiSolidDislike />
                                 </span>
                             </button>
-                        </div>
-
-                        <div className="flex items-center gap-4 pt-4 text-sm text-sky-50">
-                            <img
-                                src={userDetails.profile}
-                                alt="user name"
-                                title="user name"
-                                className="rounded-full md:h-16 md:w-16 h-6 w-6 shrink-0 object-cover shadow-md shadow-gray-500"
-                            />
-                            <div className="flex flex-col gap-x-1 text-start">
-                                <span className="text-xs md:text-sm md:font-bold font-semibold capitalize">{userDetails.userName}</span>
-                            </div>
                         </div>
                     </figcaption>
                 </figure>
