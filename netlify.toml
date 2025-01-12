@@ -1,14 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "/*"
-  status = 404
-
-[[redirects]]
-  from = "/"
-  to = "/"
-  status = 200
-
-[[redirects]]
-  from = "/profile"
-  to = "/profile"
+  to = "/index.html"
   status = 200
