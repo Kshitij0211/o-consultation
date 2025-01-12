@@ -1,37 +1,36 @@
 import { useState } from "react";
 import { BiSolidLike, BiSolidDislike } from "react-icons/bi";
+import { UserProfile } from "../Images";
 
-const Comments = (props) => {
+const Comments = ({user}) => {
 
-    const [userDetails, setUserDetails] = useState({ ...props })
+    const [userDetails, setUserDetails] = useState({ ...user })
     const [liked, setLiked] = useState(false)
     const [disliked, setDisliked] = useState(false)
 
     const likedComment = () => {
-
         if (!liked) {
-            setUserDetails({ ...props, likes: ++userDetails.likes })
+            setUserDetails({ ...user, likes: ++userDetails.likes })
             if (disliked)
                 setDisliked(!disliked)
         }
         else
-            setUserDetails({ ...props, likes: --userDetails.likes })
+            setUserDetails({ ...user, likes: --userDetails.likes })
 
         setLiked(!liked);
     }
 
     const dislikedComment = () => {
-
         if (liked) {
             setLiked(!liked)
-            setUserDetails({ ...props, likes: --userDetails.likes })
+            setUserDetails({ ...user, likes: --userDetails.likes })
         }
 
         setDisliked(!disliked)
     }
 
     return (
-        <li className="bg-sky-800 rounded text-white">
+        <li key={userDetails._id} className="bg-sky-800 rounded text-white">
             <div className="relative py-4 h-full">
                 <figure className="relative flex flex-col justify-between z-10 h-full">
                     <blockquote className="p-3 flex-1 md:p-6 text-xs md:text-sm lg:text-lg leading-relaxed text-pretty md:text-left">
@@ -41,14 +40,9 @@ const Comments = (props) => {
                     </blockquote>
                     <figcaption className="flex flex-row items-center justify-between gap-x-1 md:gap-x-2 px-2 md:px-6 pt-0 text-sm text-sky-500">
                         <div className="flex items-center gap-4 text-sm text-sky-50">
-                            <img
-                                src={userDetails.profile}
-                                alt="user name"
-                                title="user name"
-                                className="rounded-full md:h-16 md:w-16 h-6 w-6 shrink-0 object-cover shadow-md shadow-gray-500"
-                            />
+                            <UserProfile user={userDetails.profile} />
                             <div className="flex flex-col gap-x-1 text-start">
-                                <span className="text-xs md:text-sm md:font-bold font-semibold capitalize">{userDetails.userName}</span>
+                                <span className="text-xs md:text-sm md:font-bold font-semibold capitalize">{userDetails.name}</span>
                             </div>
                         </div>
                         <div className="inline-flex divide-x divide-sky-100 overflow-hidden rounded-full">

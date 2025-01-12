@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react"
-import medicalClinic from "../../assets/medicalClinic.jpg"
 import { CiMapPin } from "react-icons/ci";
+import { MdTouchApp } from "react-icons/md";
 import GetInTouchForm from "./GetInTouchForm";
+import { GITImage } from "../Images";
 
 const GetInTouch = () => {
     const [isShowing, setIsShowing] = useState(false)
@@ -75,18 +76,18 @@ const GetInTouch = () => {
 
     return (
         <>
-            <button onClick={() => setIsShowing(true)} className="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-sky-500 px-5 text-sm font-medium tracking-wide text-white shadow-md shadow-sky-200 transition duration-300 hover:bg-sky-600 hover:shadow-sm hover:shadow-sky-200 focus:bg-sky-700 focus:shadow-sm focus:shadow-sky-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-sky-300 disabled:bg-sky-300 disabled:shadow-none">
+            <button onClick={() => setIsShowing(true)} className="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded bg-sky-500 px-3 md:px-5 text-sm md:text-sm font-medium tracking-wide text-white shadow-md shadow-sky-200 transition duration-300 hover:bg-sky-600 hover:shadow-sm hover:shadow-sky-200 focus:bg-sky-700 focus:shadow-sm focus:shadow-sky-200 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-sky-300 disabled:bg-sky-300 disabled:shadow-none">
                 <span>Get In Touch</span>
+                <MdTouchApp className='text-base' />
             </button>
 
             {isShowing && typeof document !== "undefined" ?
-                <div className="fixed top-0 left-0 z-[999] flex h-screen w-screen items-center justify-center bg-slate-900/50"
+                <div className="fixed top-0 left-0 z-[999] flex h-svh w-svw flex-1 items-center justify-center bg-slate-900/70 backdrop-blur-3xl"
                     aria-labelledby="content-3a"
                     aria-modal="true"
                     tabIndex="-1"
                     role="dialog"
                 >
-                    {/*    <!-- Modal --> */}
                     <div
                         ref={wrapperRef}
                         className="flex items-stretch max-h-[90svh] w-11/12 md:w=10/12 lg:w-8/12 flex-row gap-6 overflow-hidden rounded bg-white p-3 md:p-6 text-slate-500 shadow-xl shadow-slate-700/10"
@@ -95,11 +96,7 @@ const GetInTouch = () => {
                     >
                         <div className="lg:block hidden overflow-hidden rounded-br-3xl text-slate-500 shadow-md shadow-slate-200 w-2/5">
                             <figure className="relative align-middle h-full">
-                                <img
-                                    src={medicalClinic}
-                                    alt="card image"
-                                    className="w-full h-full object-cover"
-                                />
+                                <GITImage />
                                 <figcaption className="absolute bottom-0 left-0 w-full p-3 text-white">
                                     <div className="bg-gradient-to-t from-slate-800 locationFigCaption p-2 pt-6">
                                         <h3 className="text-lg font-medium">O-Consultation Clinic</h3>

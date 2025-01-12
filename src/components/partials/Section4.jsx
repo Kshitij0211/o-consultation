@@ -2,46 +2,35 @@ import { useEffect } from "react";
 import DoctorInfo from "./DoctorInfo";
 import Glide from "@glidejs/glide"
 import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
-import bestDoctor1 from '../../assets/bestDoctor1.jpg'
-import bestDoctor2 from '../../assets/bestDoctor2.jpg'
-import bestDoctor3 from '../../assets/bestDoctor3.jpg'
-import bestDoctor4 from '../../assets/bestDoctor4.jpg'
-import bestDoctor5 from '../../assets/bestDoctor5.jpg'
-
 
 const Section4 = () => {
 
-    const bestDoctors = [{
+    const bestDoctors2 = [{
         doctorName: "Dr. Neil Malandez",
         specialization: "neurosurgeon",
-        content: "Experience the simple pleasures of a world with no cars.",
-        rating: 4,
-        profile: bestDoctor1
+        degree: "MD",
+        profile: "bestDoctor1"
     }, {
         doctorName: "Dr. Shaun Murphy",
         specialization: "cardiologist",
-        content: "Experience the simple pleasures of a world with no cars.",
-        rating: 4,
-        profile: bestDoctor2
+        degree: "MD",
+        profile: "bestDoctor2"
     }, {
         doctorName: "Dr. Claire Brown",
         specialization: "neurosurgeon",
-        content: "Experience the simple pleasures of a world with no cars.",
-        rating: 3,
-        profile: bestDoctor3
+        degree: "MBBS/DO",
+        profile: "bestDoctor3"
     }, {
         doctorName: "Dr. Vivek Sharma",
         specialization: "orthopedic surgeon",
-        content: "Experience the simple pleasures of a world with no cars.",
-        rating: 4,
-        profile: bestDoctor4
+        degree: "MS",
+        profile: "bestDoctor4"
     }, {
         doctorName: "Dr. Audrey Lim",
         specialization: "orthopedic surgeon",
-        content: "Experience the simple pleasures of a world with no cars.",
-        rating: 3,
-        profile: bestDoctor5
-    }];
+        degree: "MBBS",
+        profile: "bestDoctor5"
+    }]
 
     useEffect(() => {
 
@@ -78,24 +67,22 @@ const Section4 = () => {
         <>
             <section className="min-h-svh bg-slate-200 justify-center items-center flex flex-col px-3 md:px-12 py-5 overflow-clip relative" id="teamSection">
                 <div className="hero text-center">
-                    <h1 className="lg:text-6xl lg:font-medium mdfont-semibold font-bold tracking-tight text-sky-600 text-3xl md:text-5xl text-center">
-                        Our Team of Best Doctors
+                    <h1 className="lg:font-medium md:font-semibold font-bold text-center heroHeading">
+                        Our Team of
+                        <span className='text-sky-600'> Best Doctors</span>
                     </h1>
-                    <p className="md:text-lg text-md leading-8 my-4 md:my-8 text-justify text-gray-600 w-full md:w-[75%] mx-auto">
-                        Web accessibility means
-                        that websites, tools, and technologies are designed and developed so
-                        that people with disabilities can use them.
+                    <p className="md:text-lg text-md md:leading-8 p-4 md:my-8 text-justify md:text-center mx-auto text-gray-600 w-full md:w-[75%]">
+                        Experienced specialists dedicated to providing top-quality online consultations, ensuring your health is in expert hands.
                     </p>
                 </div>
                 <div className="mx-auto w-full">
                     <div className="glide-08 relative">
-                        {/*    <!-- Slides --> */}
                         <div data-glide-el="track">
                             <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex overflow-clip p-0">
                                 {
-                                    bestDoctors.map((doctor, key) =>
+                                    bestDoctors2.map((doctor, key) =>
                                         <li key={key}>
-                                            <DoctorInfo name={doctor.doctorName} spec={doctor.specialization} content={doctor.content} rating={doctor.rating} profile={doctor.profile} />
+                                            <DoctorInfo name={doctor.doctorName} degree={doctor.degree} spec={doctor.specialization} profile={doctor.profile} />
                                         </li>
                                     )
                                 }
@@ -120,7 +107,6 @@ const Section4 = () => {
                                 <FaAnglesRight />
                             </button>
                         </div>
-                        {/* <!-- End Testimonial carousel --> */}
                     </div>
                 </div>
             </section >

@@ -6,11 +6,13 @@ import Section4 from "./partials/Section4";
 import StatsSection from "./partials/StatsSection";
 import Footer from "./partials/Footer";
 import Section5 from "./partials/Section5";
+import Preloader from "./Images";
 
 const Home = () => {
 
     return (
         <>
+            <Preloader />
             <Navbar />
             <HeroSection />
             <AboutSection />

@@ -27,10 +27,11 @@ const Section3 = () => {
         <>
             <section className="min-h-svh bg-gray-100 justify-center flex flex-col p-6 md:p-12">
                 <div className="hero text-center">
-                    <h1 className="lg:text-6xl lg:font-medium md:font-semibold tracking-tight text-sky-600 text-5xl font-bold text-center">
-                        How it Works
+                    <h1 className="lg:font-medium md:font-semibold font-bold text-center heroHeading">
+                        How it
+                        <span className="text-sky-600"> Works</span>
                     </h1>
-                    <p className="md:text-lg text-md leading-8 my-8 text-gray-600 w-full md:w-[75%] mx-auto">
+                    <p className="md:text-lg text-md md:leading-8 text-justify md:text-center my-4 mb-8 text-gray-600 w-full md:w-[75%] px-4 mx-auto">
                         Scheduling your appointment is quick and easy! Follow these simple steps to connect with our expert healthcare professionals and ensure you receive the care you need.
                     </p>
                 </div>

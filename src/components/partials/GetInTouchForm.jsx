@@ -1,9 +1,8 @@
 
 import { PiMapPinSimpleFill } from "react-icons/pi";
 import { AiOutlineUser, AiOutlineMail, AiOutlinePhone, AiOutlineSend } from "react-icons/ai";
-import consultant from '../../assets/svg/consultant.png'
-import patient from '../../assets/svg/patient.png'
 import { useState } from "react";
+import { GITIcons } from "../Images";
 
 const GetInTouchForm = () => {
 
@@ -85,8 +84,8 @@ const GetInTouchForm = () => {
                     <div className="relative my-3 grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
                         <div className="w-full">
                             <input className="peer hidden transition-colors border-2 rounded appearance-none cursor-pointer peer" type="checkbox" id="patient" onChange={() => { }} checked={isPatient} />
-                            <label onClick={() => setIsPatient(!isPatient)} className="cursor-pointer flex flex-row bg-white peer-checked:bg-sky-700 mx-auto rounded shadow-lg text-left items-center peer-checked:text-sky-50 text-sky-900 shadow-slate-200 p-4 gap-x-4 group">
-                                <img src={patient} alt="patientSVG" className="block h-10 xl:h-12 drop-shadow-[0_6px_6px_#164dcc50] group-hover:-translate-x-0.5 transition-all duration-700" />
+                            <label onClick={() => setIsPatient(true)} className="cursor-pointer flex flex-row bg-white peer-checked:bg-sky-700 mx-auto rounded shadow-lg text-left items-center peer-checked:text-sky-50 text-sky-900 shadow-slate-200 p-4 gap-x-4 group">
+                                <GITIcons userType="patient" />
                                 <div className="flex flex-col">
                                     <h3 className="text-sm">
                                         I'm a
@@ -97,8 +96,8 @@ const GetInTouchForm = () => {
                         </div>
                         <div className="w-full">
                             <input className="peer hidden transition-colors border-2 rounded appearance-none cursor-pointer peer" type="checkbox" id="consultant" onChange={() => { }} checked={!isPatient} />
-                            <label onClick={() => setIsPatient(!isPatient)} className="cursor-pointer flex flex-row bg-white peer-checked:bg-sky-700 mx-auto rounded shadow-lg text-left peer-checked:text-sky-50 items-center text-sky-900 shadow-slate-200 p-4 gap-x-4 group">
-                                <img src={consultant} alt="consultantSVG" className="block h-10 xl:h-12 drop-shadow-[0_6px_6px_#164dcc50] group-hover:-translate-x-0.5 transition-all duration-700" />
+                            <label onClick={() => setIsPatient(false)} className="cursor-pointer flex flex-row bg-white peer-checked:bg-sky-700 mx-auto rounded shadow-lg text-left peer-checked:text-sky-50 items-center text-sky-900 shadow-slate-200 p-4 gap-x-4 group">
+                                <GITIcons userType="consultant" />
                                 <div className="flex flex-col">
                                     <h3 className="text-sm">
                                         I'm a
