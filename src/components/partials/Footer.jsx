@@ -12,7 +12,8 @@ const Footer = () => {
                                 <span className="text-sky-600">O</span>
                                 <span>.Consultation</span>
                             </a>
-                            <p className="text-xs">Copyright 2022 Brand</p>
+                            <p className="text-sm">Copyright 2022 Brand</p>
+                            <p className="text-xs">Developed by <a href="https://www.linkedin.com/in/kshitij0211/">Kshitij Raj</a></p>
                         </div>
                         <nav
                             aria-labelledby="footer-social-links-dark"
@@ -57,7 +58,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="/"
+                                        href="https://www.instagram.com/_kshitij.raj/"
                                         className="transition-colors duration-300 hover:text-red-500"
                                     >
                                         <FaInstagram className="w-8 h-8" />
